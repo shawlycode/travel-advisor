@@ -8,6 +8,7 @@ import {
   Grid,
   InputLabel,
 } from "@material-ui/core";
+import PlaceDetails from "../PlaceDetails/PlaceDetails";
 
 import useStyles from "./styles";
 
@@ -17,6 +18,12 @@ const List = () => {
   const [rating, setRating] = useState("restaurants");
 
   const places = [
+    { name: "best pop" },
+    { name: "best hotel" },
+    { name: "amazing attraction" },
+    { name: "best pop" },
+    { name: "best hotel" },
+    { name: "amazing attraction" },
     { name: "best pop" },
     { name: "best hotel" },
     { name: "amazing attraction" },
@@ -46,7 +53,7 @@ const List = () => {
       <Grid container spacing={3} className={classes.list}>
         {places?.map((place, i) => (
           <Grid item key={i} xs={12}>
-            <CARD />
+            <PlaceDetails place={place} />
           </Grid>
         ))}
       </Grid>
